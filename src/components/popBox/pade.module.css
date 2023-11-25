@@ -1,0 +1,79 @@
+/* PopBox.module.css */
+
+.popBox {
+  height: 250px;
+  width: 400px;
+  background-color: #f7d881;
+  border: 3px black solid;
+  border-bottom: 10px solid black;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  font-family: Roboto, sans-serif;
+  font-size: 20px;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  -webkit-animation: scale-in-center 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+    both;
+  animation: scale-in-center 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.open {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.closingContainer {
+  position: relative;
+}
+
+.closingIcon {
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  font-size: 28px;
+  color: #e47c6e;
+  background-color: black;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out, font-size 0.3s ease-in-out;
+}
+
+.closingIcon:hover {
+  color: red;
+  font-size: 30px;
+}
+
+.infoContainer {
+  height: 100%;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+@-webkit-keyframes scale-in-center {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes scale-in-center {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+}
